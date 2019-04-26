@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+}
+#bank {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    height: 100px;
+    width: 100px;
+    border-radius: 300px !important;
+}        
+
+#game {
+    font-size: 8em;
+    height: 500px;
+    width: 500px;
+    border-radius: 300px;
+    background-image: url('../images/shrek-click.png');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+button:focus {
+    outline: 0px;
+}
