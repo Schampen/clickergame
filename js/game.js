@@ -10,6 +10,11 @@ let biggerHandsCost = 10;
 let moreLayersCost = 500;
 let betterBabiesCost = 10000;
 let donkeyCost = 130;
+let powerupvalue = 0;
+let powerupval2 = 0;
+let powerupval3 = 0;
+let pussCost = 1360;
+let dragCost = 136000;
 /* lyssna på knappen efter click event */
 gameButton.addEventListener('click', function() {
     bank += gainedByClick;
@@ -62,16 +67,46 @@ betterBabies.addEventListener('click', function() {
 
 let donkey = document.getElementById("donkey");
 donkey.textContent = donkeyCost;
-powerup.addEventListener('click', () => {
+donkey.addEventListener('click', function() {
     if (bank >= donkeyCost) {
         bank = bank - donkeyCost;
-        powerupvalue++;
-        donkeyCost = donkeyCost * 3;
+        powerupvalue+=0.1;
+        donkeyCost = donkeyCost * 1.12;
         gameButton.textContent = Math.floor(bank);
         donkey.textContent = Math.floor(donkeyCost)
-        bankElement.textContent = "Du köpte en Donkey...";
+        bankElement.textContent = "Du betalade för att sälja en Donkey... men den kom tillbaka";
     } else {
-        bankElement.textContent = "Du har inte råd med en Donkey";
+        bankElement.textContent = "Du har inte råd med att sälja en Donkey";
+    }
+});
+
+let pussinboots = document.getElementById("pussinboots");
+pussinboots.textContent = pussCost;
+pussinboots.addEventListener('click', function() {
+    if (bank >= pussCost) {
+        bank = bank - pussCost;
+        powerupvalue+=1;
+        pussCost = pussCost * 1.43;
+        gameButton.textContent = Math.floor(bank);
+        pussinboots.textContent = Math.floor(pussCost)
+        bankElement.textContent = "Du mutade Puss in Boots";
+    } else {
+        bankElement.textContent = "Du har inte råd med Puss in Boots";
+    }
+});
+
+let dragon = document.getElementById("dragon");
+dragon.textContent = dragCost;
+dragon.addEventListener('click', function() {
+    if (bank >= dragCost) {
+        bank = bank - dragCost;
+        powerupvalue+=5;
+        dragCost = dragCost * 1.7;
+        gameButton.textContent = Math.floor(bank);
+        dragon.textContent = Math.floor(dragCost)
+        bankElement.textContent = "Du köpte Dragon";
+    } else {
+        bankElement.textContent = "Du har inte råd med Dragon";
     }
 });
 
