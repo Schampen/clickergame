@@ -9,6 +9,7 @@ body {
 
 h2 {
     font-family: 'Telex', sans-serif;
+    font-size: 1.5em !important;
 }
 h1 {
     font-family: 'Josefin Slab', serif;
