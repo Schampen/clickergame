@@ -12,6 +12,7 @@ h4 {
 }
 h1 {
     font-family: 'Josefin Slab', serif;
+    font-size: 3em !important;
 }
 #bank {
     font-size: 2em;
