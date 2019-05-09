@@ -6,6 +6,13 @@ body {
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
     color: white !important;
 }
+
+h4 {
+    font-family: 'Telex', sans-serif;
+}
+h1 {
+    font-family: 'Josefin Slab', serif;
+}
 #bank {
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
@@ -28,6 +35,9 @@ button {
 }
 button:focus {
     outline: 0px;
+}
+#bank {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .col-md-4 {
